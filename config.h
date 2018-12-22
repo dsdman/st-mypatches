@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Deja Vu Sans Mono:pixelsize=17:antialias=true:autohint=true";
+static char *font = "Inconsolata:pixelsize=19:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -63,7 +63,7 @@ static unsigned int cursorthickness = 2;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-256color";
+char *termname = "xterm-256color";
 
 /*
  * spaces per tab
@@ -110,6 +110,7 @@ static const char *colorname[] = {
 	"#cccccc",
 	"#555555",
   "#222222",
+  "#202124",
 };
 
 /* Default colors (colorname index)
@@ -182,10 +183,11 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ TERMMOD,              XK_I,           iso14755,       {.i =  0} },
-	{ TERMMOD,              XK_U,           kscrollup,      {.i = -1} },
-	{ TERMMOD,              XK_D,           kscrolldown,    {.i = -1} },
-	{ TERMMOD,              XK_K,           kscrollup,      {.i =  1} },
-	{ TERMMOD,              XK_J,           kscrolldown,    {.i =  1} },
+	{ MODKEY,               XK_Escape,      keyboard_select,{ 0 } },
+	{ MODKEY|ShiftMask,     XK_U,           kscrollup,      {.i = -1} },
+	{ MODKEY|ShiftMask,     XK_D,           kscrolldown,    {.i = -1} },
+	{ MODKEY|ShiftMask,     XK_K,           kscrollup,      {.i =  1} },
+	{ MODKEY|ShiftMask,     XK_J,           kscrolldown,    {.i =  1} },
 };
 
 /*
