@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Inconsolata:pixelsize=19:antialias=true:autohint=true";
+static char *font = "Inconsolata:pixelsize=18:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -30,9 +30,9 @@ static float chscale = 1.0;
 /*
  * word delimiter string
  *
- * More advanced example: " `'\"()[]{}"
+ * More advanced example: L" `'\"()[]{}"
  */
-char *worddelimiters = " ";
+wchar_t *worddelimiters = L" ";
 
 /* selection timeouts (in milliseconds) */
 static unsigned int doubleclicktimeout = 300;
@@ -63,7 +63,7 @@ static unsigned int cursorthickness = 2;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "xterm-256color";
+char *termname = "st-256color";
 
 /*
  * spaces per tab
@@ -107,18 +107,35 @@ static const char *colorname[] = {
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-  "#222222",
-  "#202124",
+	"#cccccc", /* 256*/
+	"#555555", /* 257*/
+  "#222222", /* 258*/
+  "#202124", /* 259*/
+  "#1d2021", /* base00 260*/
+  "#fb4934", /* base08 261*/
+  "#b8bb26", /* base0B 262*/
+  "#fabd2f", /* base0A 263*/
+  "#83a598", /* base0D 264*/
+  "#d3869b", /* base0E 265*/
+  "#8ec07c", /* base0C 266*/
+  "#d5c4a1", /* base05 267*/
+  "#665c54", /* base03 268*/
+  "#fe8019", /* base09 269*/
+  "#3c3836", /* base01 270*/
+  "#504945", /* base02 271*/
+  "#bdae93", /* base04 272*/
+  "#ebdbb2", /* base06 273*/
+  "#d65d0e", /* base0F 274*/
+  "#fbf1c7", /* base07 275*/
 };
 
 /* Default colors (colorname index)
  * foreground, background, cursor */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 7;
-static unsigned int defaultrcs = 257;
+
+unsigned int defaultfg = 267;
+unsigned int defaultbg = 260;
+static unsigned int defaultcs = 273;
+static unsigned int defaultrcs = 260;
 
 /*
  * Default shape of cursor

@@ -1,5 +1,5 @@
 # st version
-VERSION = 0.8.1
+VERSION = 0.8.2
 
 # Customize below to fit your system
 
@@ -22,7 +22,6 @@ LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft \
 
 # flags
 STCPPFLAGS = -DVERSION=\"$(VERSION)\" -D_XOPEN_SOURCE=600
-CFLAGS = -march=haswell -O2 -pipe
 STCFLAGS = $(INCS) $(STCPPFLAGS) $(CPPFLAGS) $(CFLAGS)
 STLDFLAGS = $(LIBS) $(LDFLAGS)
 
