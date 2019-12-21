@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Inconsolata:pixelsize=18:antialias=true:autohint=true";
+static char *font = "Inconsolata:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -83,59 +83,62 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
+//static const char *colorname[] = {
+//	/* 8 normal colors */
+//	"black",
+//	"red3",
+//	"green3",
+//	"yellow3",
+//	"blue2",
+//	"magenta3",
+//	"cyan3",
+//	"gray90",
+//
+//	/* 8 bright colors */
+//	"gray50",
+//	"red",
+//	"green",
+//	"yellow",
+//	"#5c5cff",
+//	"magenta",
+//	"cyan",
+//	"white",
+//
+//	[255] = 0,
+//
+//	/* more colors can be added after 255 to use with DefaultXX */
+//	"#cccccc", /* 256*/
+//	"#555555", /* 257*/
+//  "#222222", /* 258*/
+//  "#202124", /* 259*/
+//};
+
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc", /* 256*/
-	"#555555", /* 257*/
-  "#222222", /* 258*/
-  "#202124", /* 259*/
-  "#1d2021", /* base00 260*/
-  "#fb4934", /* base08 261*/
-  "#b8bb26", /* base0B 262*/
-  "#fabd2f", /* base0A 263*/
-  "#83a598", /* base0D 264*/
-  "#d3869b", /* base0E 265*/
-  "#8ec07c", /* base0C 266*/
-  "#d5c4a1", /* base05 267*/
-  "#665c54", /* base03 268*/
-  "#fe8019", /* base09 269*/
-  "#3c3836", /* base01 270*/
-  "#504945", /* base02 271*/
-  "#bdae93", /* base04 272*/
-  "#ebdbb2", /* base06 273*/
-  "#d65d0e", /* base0F 274*/
-  "#fbf1c7", /* base07 275*/
+  "#151515", /* base00 */
+  "#ac4142", /* base08 */
+  "#90a959", /* base0B */
+  "#f4bf75", /* base0A */
+  "#6a9fb5", /* base0D */
+  "#aa759f", /* base0E */
+  "#75b5aa", /* base0C */
+  "#d0d0d0", /* base05 */
+  "#505050", /* base03 */
+  "#d28445", /* base09 */
+  "#202020", /* base01 */
+  "#303030", /* base02 */
+  "#b0b0b0", /* base04 */
+  "#e0e0e0", /* base06 */
+  "#8f5536", /* base0F */
+  "#f5f5f5", /* base07 */
 };
 
 /* Default colors (colorname index)
  * foreground, background, cursor */
 
-unsigned int defaultfg = 267;
-unsigned int defaultbg = 260;
-static unsigned int defaultcs = 273;
-static unsigned int defaultrcs = 260;
+unsigned int defaultfg = 7;
+unsigned int defaultbg = 0;
+static unsigned int defaultcs = 15;
+static unsigned int defaultrcs = 0;
 
 /*
  * Default shape of cursor
