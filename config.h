@@ -93,6 +93,9 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
+/* bg opacity */
+float alpha = 0.91;
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
   "#181818", /* base00 */
@@ -111,11 +114,13 @@ static const char *colorname[] = {
   "#e8e8e8", /* base06 */
   "#a16946", /* base0F */
   "#f8f8f8", /* base07 */
+  [255] = 0,
+  "black", /* alpha patch */
 };
 
 unsigned int defaultfg = 7;
 unsigned int defaultbg = 0;
-static unsigned int defaultcs = 13;
+unsigned int defaultcs = 13;
 static unsigned int defaultrcs = 0;
 /*
  * Default shape of cursor
